@@ -1,15 +1,11 @@
 sudo: false
 
-language: node_js
+language: java
 
-Node_js:
-  - node
-install:
-  - npm ci (npm audit)
-
-script:
-  - npm run lint 
-  - npm run test: coveralls
-
-nofication:
-  email:false
+jdk:
+  - oraclejdk8
+  
+cache:
+  directories:
+  - $HOME/.m2
+  - $HOME/.gradle
